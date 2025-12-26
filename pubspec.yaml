@@ -41,6 +41,7 @@ dependencies:
   intl: ^0.20.2
   flutter_html: ^3.0.0
   flutter_html_table: ^3.0.0
+  window_manager: ^0.5.1
 
 dev_dependencies:
   flutter_test:

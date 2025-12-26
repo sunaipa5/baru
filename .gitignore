@@ -61,3 +61,19 @@ ios/Runner/Generated.xcconfig
 # Gradle
 .gradle/
 local.properties
+
+//Build
+
+rpmdude_build/RPMS
+rpmdude_build/SRPMS
+rpmdude_build/BUILD
+rpmdude_build/SOURCES/baru
+rpmdude_build/SOURCES/cleansofiles.sh
+rpmdude_build/SOURCES/data.tar.gz
+
+*.AppImage
+baru.AppDir/usr/bin/*
+baru.AppDir/.DirIcon
+bundles
+
+reposize.sh

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Baru
+Exec=baru
+Icon=org.sunaipa.baru
+Type=Application
+Categories=Utility;
+Terminal=false
+StartupNotify=true

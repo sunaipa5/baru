@@ -6,8 +6,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:html/dom.dart' as dom;
 import 'package:flutter_html_table/flutter_html_table.dart';
+import 'package:baru/window_storage.dart';
 
-void main() => runApp(App());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await WindowStorage.initialize(title: 'Baru');
+
+  runApp(App());
+}
 
 class App extends StatelessWidget {
   const App({super.key});
