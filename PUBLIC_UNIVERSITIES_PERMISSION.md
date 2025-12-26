@@ -24,7 +24,7 @@ ek izinler kapsamında geçerlidir.
 
 ---
 
-# ADDITIONAL PERMISSION FOR PUBLIC UNIVERSITIES
+## ADDITIONAL PERMISSION FOR PUBLIC UNIVERSITIES
 
 Unless otherwise stated, this software is licensed under the
 GNU General Public License version 3 (GPLv3).
@@ -81,7 +81,7 @@ scope are fully subject to the GNU GPLv3.
 
 ---
 
-# KAMU ÜNİVERSİTELERİ İÇİN EK İZİN
+## KAMU ÜNİVERSİTELERİ İÇİN EK İZİN
 
 Bu yazılım, aksi belirtilmedikçe GNU Genel Kamu Lisansı sürüm 3
 (GPLv3) hükümlerine tabidir.
