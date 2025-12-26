@@ -47,7 +47,9 @@ public universities and public higher education institutions
    no reference may be made, other than to the license holder, to;
 
    a) any natural person,
+
    b) private entities, companies, or foundations,
+
    c) third-party institutions or organizations.
 
    References may be made solely to the public university
@@ -100,7 +102,9 @@ Ancak, kamuya ait üniversiteler ve kamu yükseköğretim kurumları
    lisans sahibi dışında;
 
    a) Herhangi bir gerçek kişiye,
+
    b) Özel kuruluşlara, şirketlere, vakıflara,
+
    c) Üçüncü taraf kurum ve kuruluşlara
 
    atıfta bulunulamaz.
