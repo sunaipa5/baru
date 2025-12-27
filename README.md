@@ -2,7 +2,7 @@
 
 **Unofficial** Announcements and Meal List Viewer for Bartın University
 
-If you are a public University please read [PUBLIC_UNIVERSITIES_PERMISSION](https://github.com/sunaipa5/baru/blob/main/PUBLIC_UNIVERSITIES_PERMISSION.md)
+If you are a public University please read [PUBLIC_UNIVERSITIES_PERMISSION](https://github.com/sunaipa5/baru/blob/master/PUBLIC_UNIVERSITIES_PERMISSION.md)
 
 | Platform | Bundle            |
 | -------- | ----------------- |
