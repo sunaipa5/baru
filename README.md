@@ -18,16 +18,16 @@ If you are a public University please read [PUBLIC_UNIVERSITIES_PERMISSION](http
 
 ### Desktop
 
-![Desktop1](https://github.com/sunaipa5/ffcutter/blob/main/screenshots/desktop1.png?raw=true)
+![Desktop1](https://github.com/sunaipa5/baru/blob/main/screenshots/desktop1.png?raw=true)
 
 ### Desktop Announcement Viewer
 
-![Desktop2](https://github.com/sunaipa5/ffcutter/blob/main/screenshots/desktop2.png?raw=true)
+![Desktop2](https://github.com/sunaipa5/baru/blob/main/screenshots/desktop2.png?raw=true)
 
 ### Mobile
 
-![Mobile1](https://github.com/sunaipa5/ffcutter/blob/main/screenshots/mobile1.png?raw=true)
+![Mobile1](https://github.com/sunaipa5/baru/blob/main/screenshots/mobile1.png?raw=true)
 
 ### Mobile Announcement Viewer
 
-![Mobile2](https://github.com/sunaipa5/ffcutter/blob/main/screenshots/mobile2.png?raw=true)
+![Mobile2](https://github.com/sunaipa5/baru/blob/main/screenshots/mobile2.png?raw=true)
