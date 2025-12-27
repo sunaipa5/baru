@@ -14,6 +14,13 @@ If you are a public University please read [PUBLIC_UNIVERSITIES_PERMISSION](http
 | Windows  | Build from source |
 | Mac      | Build from source |
 
+[Go releases to download](https://github.com/sunaipa5/baru/releases)
+
+### Note for IOS users
+
+You can install the `.ipa` package using the sideload method, [Sidestore](https://github.com/SideStore/SideStore) or [Altstore](https://github.com/altstoreio/AltStore). My individual
+choice Sidestore.
+
 ## Screenshots
 
 ### Desktop
