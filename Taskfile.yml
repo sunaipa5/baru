@@ -1,0 +1,65 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  PACKAGE: org.sunaipa.baru
+  APP_NAME: "baru"
+  ANDROID_BUILD_DIST: "./build/app/outputs/flutter-apk/"
+  LINUX_BUILD_DIST: "./build/linux/x64/release/bundle/"
+  APP_VERSION: "1.0"
+  SOURCES_DIR: "./rpmdude_build/SOURCES"
+  RPMS_DIR: "./rpmdude_build/RPMS/x86_64"
+tasks:
+  build:
+    cmds:
+      - task: linbuild
+      - echo "Linux build done"
+      - flutter build apk
+      - cp "{{.ANDROID_BUILD_DIST}}/app-release.apk" "bundles/{{.APP_VERSION}}/{{.APP_NAME}}-{{.APP_VERSION}}.apk"
+      - echo "Android build done"
+      - echo "Build done, check /bundles"
+  linbuild:
+    cmds:
+      - "flutter build linux"
+      - mkdir -p bundles/{{.APP_VERSION}}
+      - task: buildRpm
+      - echo "RPM build done"
+      - task: buildAppImage
+      - echo "AppImage build done"
+      - |
+        tar -czf "bundles/{{.APP_VERSION}}/{{.APP_NAME}}-{{.APP_VERSION}}-x86_64.tar.gz" \
+          -C {{.LINUX_BUILD_DIST}} {{.APP_NAME}} data lib
+    silent: true
+  buildRpm:
+    cmds:
+      - mkdir -p {{.SOURCES_DIR}}
+      - |
+        cd {{.LINUX_BUILD_DIST}}lib
+        for f in *.so; do
+          patchelf --set-rpath '$ORIGIN' "$f"
+        done
+      - tar -czf {{.SOURCES_DIR}}/data.tar.gz -C {{.LINUX_BUILD_DIST}} data lib
+      - cp "{{.LINUX_BUILD_DIST}}{{.APP_NAME}}" "{{.SOURCES_DIR}}/"
+      - rpmdude build
+      - mkdir -p bundles/{{.APP_VERSION}}
+      - |
+        for f in {{.RPMS_DIR}}/{{.APP_NAME}}-{{.APP_VERSION}}*.rpm; do
+          if [ -f "$f" ]; then
+            cp "$f" "bundles/{{.APP_VERSION}}/{{.APP_NAME}}-{{.APP_VERSION}}-x86_64.rpm"
+            break
+          fi
+        done
+    silent: true
+  buildAppImage:
+    cmds:
+      - mkdir -p {{.APP_NAME}}.AppDir/usr/bin
+      - cp -r {{.LINUX_BUILD_DIST}}{\{{.APP_NAME}},data,lib} {{.APP_NAME}}.AppDir/usr/bin
+      - |
+        cd {{.APP_NAME}}.AppDir/usr/bin/lib
+        for f in *.so; do
+          patchelf --set-rpath '$ORIGIN' "$f"
+        done
+      - mkdir -p bundles/{{.APP_VERSION}}
+      - ./appimagetool.AppImage "{{.APP_NAME}}.AppDir" "bundles/{{.APP_VERSION}}/{{.APP_NAME}}-{{.APP_VERSION}}-x86_64.AppImage"
+    silent: true
