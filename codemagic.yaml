@@ -1,0 +1,23 @@
+workflows:
+  sample-workflow:
+    name: iOS Release Build
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+
+    environment:
+      flutter: stable
+
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build iOS release
+        script: |
+          flutter build ios --release --no-codesign
+      - name: Zip .app
+        script: |
+          cd build/ios/iphoneos
+          zip -r Runner.zip Runner.app
+
+    artifacts:
+      - build/ios/iphoneos/Runner.zip
